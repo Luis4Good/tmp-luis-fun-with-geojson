@@ -1,6 +1,6 @@
 """_summary_
 
-author: Conflicting User
+author: Luis Figueroa
 
 Returns:
     generates a geojson file with only MultiPolygons
