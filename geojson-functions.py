@@ -1,5 +1,7 @@
 """_summary_
 
+author: Luis Figueroa
+
 Returns:
     generates a geojson file with only MultiPolygons
 """
@@ -23,8 +25,8 @@ def force_feature_to_multipolygon(feature):
     return feature
 
 
-# def count_numbers_of_features(features):
-#     return len(features)
+def count_numbers_of_features(features):
+    return len(features)
 
 def save_geojson(path, geojson):
     with open(path, 'w') as f:
@@ -35,7 +37,7 @@ def main():
     for feature in features:
         feature = force_feature_to_multipolygon(feature)
     save_geojson('./OnlyMultiPolygons.geojson', {'type': 'FeatureCollection', 'features': features})
-    # print(f"number of features: {count_numbers_of_features(features)}")
+    print(f"number of features: {count_numbers_of_features(features)}")
 
 
 if __name__ == '__main__':
