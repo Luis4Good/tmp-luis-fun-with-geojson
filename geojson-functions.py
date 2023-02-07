@@ -28,6 +28,9 @@ def force_feature_to_multipolygon(feature):
 def count_numbers_of_features(features):
     return len(features)
 
+def count_numbers_of_multipolygons(features):
+    return len([feature for feature in features if feature['geometry']['type'] == 'MultiPolygon'])
+
 def save_geojson(path, geojson):
     with open(path, 'w') as f:
         json.dump(geojson, f )
@@ -38,6 +41,7 @@ def main():
         feature = force_feature_to_multipolygon(feature)
     save_geojson('./OnlyMultiPolygons.geojson', {'type': 'FeatureCollection', 'features': features})
     print(f"number of features: {count_numbers_of_features(features)}")
+    print(f"number of multipolygons: {count_numbers_of_multipolygons(features)}")
 
 
 if __name__ == '__main__':
