@@ -1,5 +1,7 @@
 """_summary_
 
+author: Luis Figueroa
+
 Returns:
     generates a geojson file with only MultiPolygons
 """
