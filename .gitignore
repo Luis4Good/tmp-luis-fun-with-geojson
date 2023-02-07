@@ -1,0 +1,7 @@
+tmp
+*.pyc
+*.pyo
+*.Zone.Identifier
+pyclean
+__pycache__
+OnlyMultiPolygons.geojson
